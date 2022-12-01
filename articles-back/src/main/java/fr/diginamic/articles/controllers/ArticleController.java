@@ -28,6 +28,7 @@ public class ArticleController {
 
     @PostMapping
     public ResponseEntity<Article> save(@RequestBody Article article) {
-        return ResponseEntity.ok().body(service.save(article));
+        Article articlePersist =service.save(article);
+        return ResponseEntity.ok().body(articlePersist);
     }
 }
