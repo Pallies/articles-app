@@ -22,7 +22,7 @@ public class ArticleController {
 
     @GetMapping
     public ResponseEntity<List<Article>> findAllArticles() {
-        List<Article> articles =service.getAll();
+        List<Article> articles = service.getAll();
         return ResponseEntity.ok().body(articles);
     }
 
